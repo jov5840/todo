@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* ui 초기화 */
+.container>div:nth-child(3){
+   background: none;
+   box-shadow: none;
+   border: none;
+   position: absolute;
+   right: 0;
+   top: 5px;
+}
+.popup-wrap>div{
+   background: none;
+   box-shadow: none;
+   border: none;
+   position: absolute;
+   right: 0;
+   top: -6px;
+}
+/* main-#red */
+button.btn-add{
+   background: none;
+   border: none;
+   padding: 0px;
+   margin: 0;
+}
+.material-icons{
+   font-family: 'Material Icons' !important;
+}
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="../css/reset.css">
+   <link rel="stylesheet" href="../css/common.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+   <script src="../js/common.js"></script>
+   <title>intro</title>
+   <style>
+      body{
+            background: #f6e5b6;
+      }
+      h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            font-weight: 400;
+      }
+   </style>
+</head>
+<body>
+   <h1>오늘도</h1>
+   <script> 
+      $(document).ready(function () { 
+            setTimeout(function() { 
+                  $("body").fadeIn(1500);
+                  location.href='dday.html'
+            },2000); 
+      }); 
+      
+      </script>
+</body>
+</html>

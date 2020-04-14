@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>main</title>
+   <link href="../css/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css" />
+   <link rel="stylesheet" href="../css/reset.css">
+   <link rel="stylesheet" href="../css/common.css">
+   <link rel="stylesheet" href="../css/main.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+   <script src="../js/jquery-1.11.0.js"></script>
+   <script src="../js/jquery.mobile-1.4.5.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+   <script src="../js/jquery.touchSwipe.min.js"></script>
+   <script src="../js/common.js"></script>
+   <script src="../js/main.js"></script>
+</head>
+<body>
+   <div id='mainPage' data-role='page'> 
+      <div data-role='content'>
+         <header>
+            <div class="container">
+               <div class="dday-wrap">
+                  <span>D-?</span>
+               </div>
+               <div class="date-wrap"></div>
+               <button type="button" class="btn-add"><i class="material-icons add">add</i></button>
+            </div>
+         </header>
+         <div class="mainTodo todolist">
+            <ul class="todo">
+               <!-- <li>
+                     <div class="todolist-content">
+                        <div class="todolist-left">
+                           <span class="todoId">20200324오후 5:06:28</span>
+                           <span class="todoTitle">수능특강</span>   
+                           <label class="check">
+                                 <input type="checkbox" name="check">
+                                 <i class="material-icons checkbox">check_box_outline_blank</i>
+                           </label>
+                        </div>
+                        <div class="todolist-right">
+                           <div class="select-time"> 
+                              <span class="hour">00</span>
+                              <span>:</span>
+                              <span class="min">00</span>
+                           </div>
+                        </div>
+                     </div>
+                     <span class="btn-bg btn-delete"><button class="material-icons">delete_outline</button></span>
+                     <span class="btn-bg btn-re"><button class="material-icons">create</button></span>
+                  </li> -->
+            </ul>
+         </div>
+      </div>
+   </div>
+   <!-- calendar page 옮김 -->
+   <div id='calPage' data-role='page'>
+      <!-- <div data-role='content'> -->
+         <div data-role='content'>
+            <div id="calendar"></div>
+            <!-- todolist -->
+            <!-- <div class="todoBox"> -->
+               <div class="subTodo todolist">
+                  <ul class="todo">
+               <!-- <li>
+                        <div class="todolist-content">
+                           <div class="todolist-left">
+                              <span class="todoId">20200324오후 5:06:28</span>
+                              <span class="todoTitle">수능특강</span>   
+                              <label class="check">
+                                 <input type="checkbox" name="check">
+                                 <i class="material-icons checkbox">check_box_outline_blank</i>
+                              </label>
+                           </div>
+                           <div class="todolist-right">
+                              <div class="select-time"> 
+                                 <span class="hour">00 : 00</span>>
+                              </div>
+                           </div>
+                        </div>
+                        <span class="btn-bg btn-delete"><button class="material-icons">delete_outline</button></span>
+                        <span class="btn-bg btn-re"><button class="material-icons">create</button></span>
+                     </li> -->
+                  </ul>
+               </div>
+            <!-- </div> -->
+         <!-- </div>  -->
+      </div>
+   </div>
+   <!-- todo 입력 팝업 -->
+   <div class="add-popup"> 
+      <div class="popup-wrap">
+         <input type="text" class="todotext">
+         <span class="re-id"></span>  <!-- 아이디 임시 저장할 곳 -->
+         <button type="submit" class="btn-in-add"><i class="material-icons in-add">add</i></button>
+         <button type="submit" class="btn-bg btn-re-add material-icons">create</button>
+      </div>
+   </div>
+   <!-- 시간 팝업 -->
+   <div class="select-time-popup">
+      <span class="re-id"></span> 
+      <p>얼마나 공부했나요?</p>
+      <div class="number">
+         <select id="select-hour">
+            <option value="00">00</option>
+         </select>
+         <span>시간</span>
+         <select id="select-min">
+            <option value="00">00</option>
+         </select>
+         <span>분</span>
+      </div>
+      <div class="btn-popup">
+         <button class="cancel">취소</button>
+         <button class="save">저장</button>
+      </div>
+   </div>
+
+</body>
+</html>

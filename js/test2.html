@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var Dday = new Date(2022, 2, 6);    // D-day(2017년 8월 30일)를 셋팅한다.
+    var now = new Date();                    // 현재(오늘) 날짜를 받아온다.
+    console.log(Dday);
+    console.log(now);
+    
+    var gap = now.getTime() - Dday.getTime();    // 현재 날짜에서 D-day의 차이를 구한다.
+    var result = Math.floor(gap / (1000 * 60 * 60 * 24)) * -1;    // gap을 일(밀리초 * 초 * 분 * 시간)로 나눈다. 이 때 -1 을 곱해야 날짜차이가 맞게 나온다.
+    console.log(gap);
+    console.log(result);
+    
+    // 732일째
+    document.write("남은 날은 " + result + " 일 입니다.");  
+    </script>
+</body>
+</html>

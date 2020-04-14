@@ -1,0 +1,454 @@
+@charset "UTF-8";
+
+header{
+   margin: 12px;
+   border-top: 1px solid #f6e5b6;
+   border-bottom: 1px solid #f6e5b6;
+}
+.material-icons{
+   vertical-align: middle;
+}
+.container{
+   position: relative;
+   padding: 10px 0;
+}
+.container>*{
+   vertical-align: middle;
+}
+.dday-wrap{
+   display: inline-block;
+   width: 60px;
+   height: 60px;
+   line-height: 60px;
+   text-align: center;
+   border-radius: 50%;;
+   background: #f6e5b6;
+}
+.date-wrap{
+   display: inline-block;
+   padding-left: 15px;
+   font-size: 18px;
+   font-family: 'Montserrat', sans-serif;
+   color: #4d5154;
+}
+header .btn-add{
+   position: absolute;
+   right: 18px;
+   top: 50%;
+   transform: translateY(-50%);
+}
+header .material-icons.add{
+   font-size: 36px;
+   color: #f6e5b6;
+}
+/* header .btn-add.show .material-icons.add{
+   color: #b5bdc7;
+} */
+.add-popup{
+   z-index: 50;
+   display: none;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   padding: 10px;
+   border-top: 1px solid #eee;
+   text-align: center;
+   box-sizing: border-box;
+}
+.popup-wrap{
+   position: relative;
+   display: inline-block;
+   width: 100%;
+}
+.add-popup input{
+   height: 30px;
+   width: 100%;
+   padding-right: 30px;
+   box-sizing: border-box;
+   border: 1px solid #ccc;
+}
+.add-popup .btn-in-add, .add-popup .btn-re-add{
+   position: absolute;
+   right: 3px;
+   top: 50%;
+   transform: translateY(-50%);
+}
+.add-popup .re-id{
+   display: none;
+}
+.add-popup .btn-re-add{
+   display: none;
+}
+.add-popup .material-icons.in-add{
+   color: #f6e5b6;
+}
+.material-icons.checkbox{
+   line-height: 40px;
+}
+/* todolist =========================================*/
+.todolist{
+   overflow: hidden;
+   display: block;
+}
+.todolist li{
+   overflow: hidden;
+   position: relative;
+   height: 40px;
+   line-height: 40px;
+   padding: 0 30px;
+   box-sizing: border-box;
+   background: #ffffff;
+}
+.todolist-content{
+   z-index: 10;
+   position: relative;
+   left: 0;
+   background: #ffffff;
+   transition: left 0.5s;
+}
+.todolist .todolist-left{
+   width: 60%;
+   display: flex;
+   justify-content: space-between;
+}
+.todolist .todolist-left .todoId{
+   display: none;
+}
+.todolist .todolist-right{
+   position: absolute;
+   right: 0;
+   top: 0;
+}
+.btn-delete{
+   position: absolute;
+   left: 28px;
+   top: 0;
+   line-height: 40px;
+}
+.btn-re{
+   position: absolute;
+   right: 30px;
+   top: 0;
+   line-height: 40px;
+}
+/* 스와이프 */
+.todolist li.right .todolist-content{
+   left:40px
+}
+.todolist li.left .todolist-content{
+   left: inherit;
+   right: 40px;
+}
+.material-icons.checkbox{
+   line-height: 40px;
+}
+select {
+   border-radius:0; /* 아이폰 사파리 보더 없애기 */
+   -webkit-appearance:none; /* 화살표 없애for chrome*/ 
+   -moz-appearance:none; /* 화살표 없애기 for firefox*/ 
+   appearance:none /* 화살표 없애기 공통*/ 
+}
+
+/* clanedar */
+
+.ui-datepicker-next, .ui-datepicker-prev{
+   display: none;
+}
+
+/* calendar========================================================== */
+
+#calendar button {
+   float: right;
+   padding: 20px;
+   color: #FE7C72;
+   font-size: 14px;
+}
+#calendar button.done{
+   float: right;
+}
+#calendar {
+   width: 100%;
+   height: 50%;
+   position: fixed;
+   left: 50%;
+   top: 0;
+   transform: translateX(-50%);
+   background: #fff;
+}   
+.ui-datepicker {
+   margin: 10px;
+   font-size: 22px;
+}
+.ui-datepicker a {
+   text-decoration: none;
+   color: #000 !important;
+}
+.ui-datepicker table {
+   width: 100%;
+}    
+/*------------------------------------Styling the Header Section*/
+.ui-datepicker-title {
+   color: #e5eaee;
+   text-align: center;
+}
+.ui-datepicker-month{
+   display: inline-block;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 20px;
+   font-weight: 500;
+   color: #000;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+   width: 12px;
+   height: 12px;
+   text-indent: 9999px;
+   border-radius: 100%;
+   cursor: pointer;
+   overflow: hidden;
+   margin-top: -12px;
+}
+.ui-datepicker-prev {
+   float: left;
+   margin-left: 12px;
+}
+.ui-datepicker-prev:after {
+   transform: rotate(45deg);
+}
+.ui-datepicker-next {
+   float: right;
+   margin-right: 12px;
+}
+.ui-datepicker-next:after {
+   transform: rotate(-135deg);
+}
+.ui-datepicker-prev:after,
+.ui-datepicker-next:after {
+   display: none;
+}
+.ui-datepicker table {
+   width: 50%;
+   position: absolute;
+   left: 50%;
+   top: 50px;
+   transform: translateX(-50%);
+   text-align: center;
+}
+.ui-datepicker-calendar thead tr th span {
+   display: block;
+   color: #000;
+   width: 40px;
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 30px;
+}
+/*---------------------------------Styling the Dates*/
+.ui-state-default {
+   display: block;
+   color: #bdc5cb;
+   line-height: 40px;
+   text-align: center;
+   font-size: 14px;
+   width: 40px;
+}
+.ui-datepicker-other-month .ui-state-default {
+   color: #eae7e7ee;
+}
+/*------------------------------------active day*/
+.ui-state-default:hover {
+   background: #eee;
+   color: #ffffff;
+   border: 1px solid #eee;
+   border-radius: 99px;
+   position: relative;
+   margin: -1px;
+}
+.ui-datepicker-calendar .ui-state-highlight {
+   color: #ffcd39;
+   font-weight: bold;
+}
+.ui-datepicker-calendar .ui-state-active {
+   background: #ffcd39;
+   color: #ffffff !important;
+   border-radius: 50%;
+}
+
+
+
+/* popup */
+.select-time-popup{
+   display: none;
+   z-index: 50;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   width: 300px;
+   height: 180px;
+   background: #fff;
+   text-align: center;
+   border: 1px solid #f6e6b7;
+}
+.select-time-popup .re-id{
+   display: none;
+}
+.select-time-popup p{
+   padding: 30px 0;
+}
+.select-time-popup .btn-popup{
+   padding-top: 40px;
+   display: flex;
+   justify-content: space-around;
+}
+.popup-bg {
+   z-index: 40;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: rgba(0,0,0,0.5);
+}
+.number select{
+   width: 50px;
+   height: 30px;
+   background: none;
+}
+/* 기본 todolist css-------------------------------  */
+.todolist{
+   overflow: hidden;
+   display: block;
+}
+.todolist li{
+   overflow: hidden;
+   position: relative;
+   height: 40px;
+   line-height: 40px;
+   padding: 0 30px;
+   box-sizing: border-box;
+}
+.todolist .todolist-content{
+   z-index: 10;
+   position: relative;
+   left: 0;
+   transition: left 0.5s;
+}
+.todolist .todolist-left{
+   width: 60%;
+   display: flex;
+   justify-content: space-between;
+}
+.todolist .todolist-right{
+   position: absolute;
+   right: 0;
+   top: 0;
+}
+
+.todolist li.right .todolist-content{
+   left:40px
+}
+.todolist li.left .todolist-content{
+   left: inherit;
+   right: 40px;
+}
+/* main todolist =========================================*/
+.mainTodo{
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   height: 85%;
+   overflow: auto;
+}
+.mainTodo li{
+   background: #fff;
+}
+.mainTodo .todolist-content{
+   background: #fff;
+}
+
+/* sub todolist =========================================*/
+.subTodo{
+   position: absolute;
+   width: 100%;
+   left: 0;
+   bottom: 0;
+   height: 50%;
+   overflow: auto;
+}
+.subTodo li{
+   background: #f6e6b7;
+}
+.subTodo .todolist-content{
+   height: 40px;
+   background: #f6e6b7;
+}
+
+/* todo 스와이프 */
+.btn-delete{
+   position: absolute;
+   left: 30px;
+   top: 0;
+   line-height: 40px;
+}
+.btn-re{
+   position: absolute;
+   right: 30px;
+   top: 0;
+   line-height: 40px;
+}
+.todolist li.right .todolist-content{
+   left:40px
+}
+.todolist li.left .todolist-content{
+   left: inherit;
+   right: 40px;
+}
+/* ============================================== */
+/* page background */
+#mainPage{
+   background: #fff;
+}
+#calPage{
+   background: #f6e5b6;
+}
+/* dot */
+.no-todo{
+   text-align: center;
+   margin: 10px 0;
+}
+.todo-dot {
+   display: inline-block;
+   width: 5px;
+   height: 5px;
+   border-radius: 50%;
+   margin-right: 2px;
+   /* margin-bottom: 7px; */
+   background: #C394FF;
+}
+
+.ui-icon-check:after, html .ui-btn.ui-checkbox-on.ui-checkbox-on:after{
+   display: none;
+}
+
+
+
+.ui-content {
+   /* border-width: 0;
+   overflow: visible;
+   overflow-x: hidden; */
+   padding: 0;
+}
+
+.ui-mobile, .ui-mobile body {
+   height: 100%;
+}
+
+.ui-mobile [data-role=page], .ui-mobile [data-role=dialog], .ui-page {
+   /* top: initial;
+   bottom: 0; */
+   position: initial;
+}
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+   text-shadow: initial;
+}
